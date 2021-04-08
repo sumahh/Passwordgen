@@ -1,16 +1,8 @@
-const alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_';
-
-const randomCharacter = alphabet[Math.floor(Math.random() * alphabet.length)];
-
+const alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 let pswd = '';
 
-function generator(length) {
-    for ( i in length) {
-        pswd += randomCharacter;
-        console.log('1');
-    }
-    return pswd;
+for(let i = 0; i < 32; i++) {
+    pswd += alphabet.charAt(Math.floor(Math.random()*63));
 }
 
-generator(Math.floor(Math.random() * 18));
-console.log('poop');
+console.log(pswd);
